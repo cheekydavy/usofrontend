@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("register-form").addEventListener("submit", async (e) => {
         e.preventDefault();
-        const res = await fetch("https://your-backend.herokuapp.com/api/auth/register", {
+        const res = await fetch("https://usobackend-d8daed181ebc.herokuapp.com/api/auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
