@@ -15,9 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
         countryCodeInput.value = countries[countrySelect.value];
     });
 
+    // Handle form submission
     document.getElementById("register-form").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const res = await fetch("https://usobackend-d8daed181ebc.herokuapp.com/api/auth/register", {
+        e.preventDefault();  // Prevent form from refreshing the page
+
+        const res = await fetch("https://your-backend.herokuapp.com/api/auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -32,7 +34,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const data = await res.json();
-        if (res.ok) window.location.href = "https://uso-red.vercel.app";
-        else alert(data.msg);
+        if (res.ok) {
+            // Successful registration, redirect to uso-red
+            window.location.href = "https://uso-red.vercel.app";
+        } else {
+            // Show error message
+            alert(data.msg);
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    // Handle login form submission
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+        e.preventDefault();  // Prevent form from refreshing the page
+
+        const res = await fetch("https://your-backend.herokuapp.com/api/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value
+            })
+        });
+
+        const data = await res.json();
+        
+        if (res.ok) {
+            // Successful login, redirect to uso-red
+            window.location.href = "https://uso-red.vercel.app";
+        } else {
+            // Show error message if login fails
+            alert(data.msg);
+        }
     });
 });
