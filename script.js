@@ -30,7 +30,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             "Sri Lanka": "94", "Sudan": "249", "Suriname": "597", "Sweden": "46", "Switzerland": "41", "Syria": "963", "Taiwan": "886",
             "Tajikistan": "992", "Tanzania": "255", "Thailand": "66", "Togo": "228", "Tunisia": "216", "Turkey": "90", "Uganda": "256",
             "Ukraine": "380", "United Arab Emirates": "971", "United Kingdom": "44", "United States": "1", "Uruguay": "598", "Uzbekistan": "998",
-            "Vatican City": "379", "Venezuela": "58", "Vietnam": "84", "Yemen": "967", "Zambia": "260", "Zimbabwe": "263"
+            "Vatican City": "379", "Venezuela": "58", "Vietnam": "84", "Yemen": "967", "Zambia": "260", "Zimbabwe": "263",
+            "Antarctica": "672", "Arctic Ocean": "672", "British Indian Ocean Territory": "246", "Caribbean Netherlands": "599",
+            "Cayman Islands": "1", "Falkland Islands": "500", "French Guiana": "594", "Greenland": "299", "Guadeloupe": "590",
+            "Martinique": "596", "Montserrat": "1", "Reunion": "262", "Saint Barthelemy": "590", "Saint Helena": "290", "Saint Pierre and Miquelon": "508",
+            "Sint Eustatius": "599", "South Georgia and the South Sandwich Islands": "500", "Turks and Caicos Islands": "1"
         };
 
         // Populate country dropdown
