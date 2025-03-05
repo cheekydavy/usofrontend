@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    // Check if we are on the Register Page
     if (document.getElementById("register-form")) {
         const countrySelect = document.getElementById("country");
         const countryCodeInput = document.getElementById("countryCode");
         const genderSelect = document.getElementById("gender");
-
-        // Full list of countries with their dialing codes
         const countries = {
             "Afghanistan": "93", "Albania": "355", "Algeria": "213", "Andorra": "376", "Angola": "244", "Antigua and Barbuda": "1",
             "Argentina": "54", "Armenia": "374", "Australia": "61", "Austria": "43", "Azerbaijan": "994", "Bahamas": "1", "Bahrain": "973",
@@ -45,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             countrySelect.appendChild(option);
         }
 
-        // Set default country and country code
+        // Default country
         countrySelect.value = "Kenya";  // Default to Kenya
         countryCodeInput.value = countries["Kenya"];
 
@@ -53,10 +50,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         countrySelect.addEventListener("change", () => {
             countryCodeInput.value = countries[countrySelect.value];
         });
-
-        // Handle registration form submission
         document.getElementById("register-form").addEventListener("submit", async (e) => {
-            e.preventDefault();  // Prevent form refresh
+            e.preventDefault(); 
 
             if (!countryCodeInput.value) {
                 alert("Please select a country.");
@@ -91,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Check if we are on the Login Page
+    // Login Page
     if (document.getElementById("login-form")) {
         document.getElementById("login-form").addEventListener("submit", async (e) => {
             e.preventDefault();
