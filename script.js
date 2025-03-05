@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             "Sint Eustatius": "599", "South Georgia and the South Sandwich Islands": "500", "Turks and Caicos Islands": "1"
         };
 
-        // Populate country dropdown
         for (const country in countries) {
             const option = document.createElement("option");
             option.value = country;
@@ -42,11 +41,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             countrySelect.appendChild(option);
         }
 
-        // Default country
-        countrySelect.value = "Kenya";  // Default to Kenya
+        countrySelect.value = "Kenya";
         countryCodeInput.value = countries["Kenya"];
 
-        // Update country code based on selected country
         countrySelect.addEventListener("change", () => {
             countryCodeInput.value = countries[countrySelect.value];
         });
@@ -67,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         email: document.getElementById("email").value,
                         password: document.getElementById("password").value,
                         age: document.getElementById("age").value,
-                        gender: genderSelect.value,  // Now using dropdown
+                        gender: genderSelect.value,
                         phone: document.getElementById("phone").value,
                         countryCode: countryCodeInput.value
                     })
@@ -86,7 +83,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Login Page
     if (document.getElementById("login-form")) {
         document.getElementById("login-form").addEventListener("submit", async (e) => {
             e.preventDefault();
